@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class RegisterSignIn extends StatelessWidget {
@@ -15,19 +17,25 @@ class RegisterSignIn extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onpressed,
-      child: Container(
-        width: 130,
-        height: 50,
-        decoration: BoxDecoration(
-          color: color,
-          border: Border.all(width:2,color: Colors.white),
-        ),
-        child:  Center(
-          child: Text(
-            title,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w700
+      child: ClipRRect(
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 30,sigmaY: 30),
+          child: Container(
+            width: 130,
+            height: 50,
+            decoration: BoxDecoration(
+              color: color,
+              border: Border.all(width:1,color: Colors.white),
+              borderRadius: BorderRadius.circular(8)
+            ),
+            child:  Center(
+              child: Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700
+                ),
+              ),
             ),
           ),
         ),

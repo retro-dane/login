@@ -18,11 +18,12 @@ class Intro extends StatelessWidget {
             0.9
           ], colors: [
             Colors.white.withOpacity(0.7),
-            Colors.purple.withOpacity(0.5)
+            Colors.purple.withOpacity(0.9)
           ])
       ),
       child: Scaffold(
         backgroundColor: Colors.white.withOpacity(0.6),
+        resizeToAvoidBottomInset: true,
         body: Column(
           children: [
             Center(
@@ -60,37 +61,38 @@ class Intro extends StatelessWidget {
               maxLines: 2,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 13,
+                fontSize: 16,
                 color: Colors.grey,
-                fontWeight:FontWeight.w600,
+                fontWeight:FontWeight.w700,
                 decoration: TextDecoration.none,
               ),
             ),
-            const SizedBox(height:80),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                 RegisterSignIn(
-                  color: Colors.white,
-                  title:"Register",
-                  onpressed: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SignInPage()),
-                    );
-                  },
-                ),
-                RegisterSignIn(
-                  color: Colors.transparent,
-                  title:"Sign In",
-                  onpressed: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SignInPage()),
-                    );
-                  },
-                ),
-              ],
+            Expanded(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:  [
+                   RegisterSignIn(
+                    color: Colors.white.withOpacity(0.8),
+                    title:"Register",
+                    onpressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SignInPage()),
+                      );
+                    },
+                  ),
+                  RegisterSignIn(
+                    color: Colors.transparent,
+                    title:"Sign In",
+                    onpressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SignInPage()),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ],
         ),

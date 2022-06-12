@@ -15,7 +15,7 @@ class InputFields extends StatelessWidget {
               fillColor: Colors.grey.withOpacity(0.2),
               hintText:hint ,
               hintStyle: const TextStyle(
-                  color: Colors.grey
+                  color: Colors.black54
               ),
               border: InputBorder.none,
               enabledBorder: OutlineInputBorder(

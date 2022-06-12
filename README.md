@@ -1,15 +1,9 @@
-# login
+# Name
+Flutter Login UI
 
-This is a Simple Login Page flow
+## Description
 
-## Getting Started
+This project is a simple 2 page UI built using Flutter. It has a beautiful layout. Feel free
+to check out the code if your interested.
 
-This project is a starting point for a simple login flow.
-
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+###Visuals
