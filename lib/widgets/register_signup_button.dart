@@ -20,7 +20,7 @@ class RegisterSignIn extends StatelessWidget {
         height: 50,
         decoration: BoxDecoration(
           color: color,
-          border: Border.all(width:3,color: Colors.white),
+          border: Border.all(width:2,color: Colors.white),
         ),
         child:  Center(
           child: Text(

@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:login/screens/sign_in.dart';
 import 'package:login/widgets/register_signup_button.dart';
 
 class Intro extends StatelessWidget {
@@ -17,12 +18,12 @@ class Intro extends StatelessWidget {
             0.2,
             0.9
           ], colors: [
-            Colors.white.withOpacity(0.8),
-            Colors.purple.withOpacity(0.7)
+            Colors.white.withOpacity(0.7),
+            Colors.purple.withOpacity(0.5)
           ])
       ),
       child: Scaffold(
-        backgroundColor: Colors.white.withOpacity(0.85),
+        backgroundColor: Colors.white.withOpacity(0.6),
         body: Column(
           children: [
             Center(
@@ -66,12 +67,30 @@ class Intro extends StatelessWidget {
                 decoration: TextDecoration.none,
               ),
             ),
-            const SizedBox(height:40),
+            const SizedBox(height:80),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                RegisterSignIn(color: Colors.white,title:"Register",),
-                RegisterSignIn(color: Colors.transparent,title:"Sign In"),
+              children:  [
+                 RegisterSignIn(
+                  color: Colors.white,
+                  title:"Register",
+                  onpressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SignInPage()),
+                    );
+                  },
+                ),
+                RegisterSignIn(
+                  color: Colors.transparent,
+                  title:"Sign In",
+                  onpressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SignInPage()),
+                    );
+                  },
+                ),
               ],
             ),
           ],
